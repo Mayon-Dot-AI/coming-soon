@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark light" />
+    <title>mayon.ai — Coming Soon</title>
+    <meta
+      name="description"
+      content="mayon.ai — Something intelligent is coming soon. Join the waitlist to be notified."
+    />
+    <meta name="theme-color" content="#121e27" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="mayon.ai — Coming soon" />
+    <meta property="og:description" content="Infrastructure for production AI. Join the private beta." />
+    <meta property="og:image" content="assets/img/mayon_ai_logo_transparent_cropped.png" />
+    <link rel="icon" type="image/png" href="assets/img/mayon_ai_logo_transparent_cropped.png" />
+    <link rel="apple-touch-icon" href="assets/img/mayon_ai_logo_transparent_cropped.png" />
+    <link rel="preload" as="image" href="assets/img/mayon_ai_logo_transparent_cropped.png" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="hero" role="main">
+      <div class="brand">
+        <img
+          class="logo"
+          src="assets/img/mayon_ai_logo_transparent_cropped.png"
+          alt="mayon.ai logo"
+          width="192"
+          height="192"
+        />
+        <p class="tagline">Something intelligent is coming soon.</p>
+      </div>
+
+      <section class="cta" aria-labelledby="notify-title">
+        <h2 id="notify-title" class="visually-hidden">Join the waitlist</h2>
+        <form id="notify-form" class="notify" method="get" action="mailto:hello@mayon.ai" enctype="text/plain">
+          <label for="email" class="visually-hidden">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            inputmode="email"
+            autocomplete="email"
+            placeholder="you@company.com"
+            required
+          />
+          <button type="submit" class="btn-primary">Notify me</button>
+        </form>
+        <p class="helper">Prefer email? <a href="mailto:hello@mayon.ai?subject=Notify%20me&body=Please%20let%20me%20know%20when%20mayon.ai%20launches.">hello@mayon.ai</a></p>
+        <p id="message" class="message" role="status" aria-live="polite" hidden></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> mayon.ai</p>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+  </html>
+
+

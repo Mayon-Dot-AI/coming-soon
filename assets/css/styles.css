@@ -1,0 +1,132 @@
+/* mayon.ai — Coming Soon styles */
+
+/* CSS Reset (trimmed) */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body, h1, h2, p { margin: 0; }
+img { display: block; max-width: 100%; height: auto; }
+button, input { font: inherit; }
+
+:root {
+  --bg: #121e27; /* deep blue-grey from provided logo background */
+  --text: #e8f0f6;
+  --muted: #9fb3c8;
+  --primary: #ffffff;
+  --accent: #2dd4bf; /* teal accent */
+  --ring: rgba(45, 212, 191, 0.4);
+  --shadow: rgba(0, 0, 0, 0.35);
+
+  --radius: 12px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 80% -10%, rgba(45,212,191,0.08), transparent 60%),
+              radial-gradient(1000px 700px at -10% 110%, rgba(56,189,248,0.07), transparent 60%),
+              var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  min-height: calc(100dvh - 80px);
+  display: grid;
+  place-items: center;
+  padding: var(--space-6) var(--space-4);
+  text-align: center;
+}
+
+.brand { display: grid; justify-items: center; gap: var(--space-3); }
+
+.logo {
+  width: clamp(120px, 18vw, 200px);
+  filter: drop-shadow(0 10px 30px var(--shadow));
+}
+
+.title {
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: clamp(16px, 2.2vw, 18px);
+}
+
+.cta { margin-top: var(--space-5); }
+
+.notify {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-2);
+  max-width: 560px;
+  margin-inline: auto;
+  background: rgba(255,255,255,0.03);
+  padding: var(--space-2);
+  border-radius: calc(var(--radius) + 4px);
+  backdrop-filter: blur(6px);
+}
+
+.notify input[type="email"] {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: var(--text);
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease, background-color 150ms ease;
+}
+
+.notify input[type="email"]::placeholder { color: #b7c7d6; opacity: 0.8; }
+.notify input[type="email"]:focus { border-color: var(--accent); box-shadow: 0 0 0 4px var(--ring); background: rgba(255,255,255,0.08); }
+
+.btn-primary {
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255,255,255,0.14);
+  color: var(--bg);
+  background: linear-gradient(180deg, #fff, #dfe9f1);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, filter 150ms ease, box-shadow 150ms ease;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+.btn-primary:hover { filter: brightness(0.98); transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+.helper { color: var(--muted); margin-top: var(--space-2); }
+.helper a { color: var(--text); text-underline-offset: 3px; }
+.helper a:hover { color: var(--accent); }
+
+.message { margin-top: var(--space-2); font-weight: 600; }
+.message.success { color: #34d399; }
+.message.error { color: #f87171; }
+
+.site-footer {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  color: var(--muted);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px; overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; border: 0; padding: 0; margin: -1px;
+}
+
+@media (max-width: 520px) {
+  .notify { grid-template-columns: 1fr; }
+}
+
+
